@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="299.0" prefWidth="600.0" style="-fx-background-color: #FFE7C7;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginController">
+   <children>
+      <Label layoutX="87.0" layoutY="109.0" text="LOGIN AS:" />
+      <Label layoutX="363.0" layoutY="102.0" text="TYPE YOUR ACCOUNT ID:" />
+      <Label layoutX="366.0" layoutY="154.0" text="TYPE YOUR PASSWORD:" />
+      <PasswordField fx:id="TextFieldPassword" layoutX="366.0" layoutY="176.0" />
+      <Label layoutX="76.0" layoutY="44.0" text="WELCOME TO OUR HOTEL MANAGEMENT SYSTEM">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="BtLogin" layoutX="415.0" layoutY="210.0" mnemonicParsing="false" onAction="#Login" text="LOGIN" />
+      <TextField fx:id="TextFieldAccountId" layoutX="366.0" layoutY="124.0" />
+      <RadioButton fx:id="RbManager" layoutX="76.0" layoutY="143.0" mnemonicParsing="false" text="MANAGER">
+         <toggleGroup>
+            <ToggleGroup fx:id="Person" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="RbReceptionist" layoutX="76.0" layoutY="169.0" mnemonicParsing="false" text="RECEPTIONIST" toggleGroup="$Person" />
+      <RadioButton fx:id="RbServer" layoutX="76.0" layoutY="198.0" mnemonicParsing="false" text="SERVER" toggleGroup="$Person" />
+      <RadioButton fx:id="RbGuest" layoutX="77.0" layoutY="225.0" mnemonicParsing="false" selected="true" text="GUEST" toggleGroup="$Person" />
+      <Label fx:id="LbLogin" alignment="CENTER" contentDisplay="CENTER" layoutX="366.0" layoutY="242.0" prefHeight="17.0" prefWidth="149.0" text=" " textAlignment="CENTER" />
+   </children>
+</Pane>
